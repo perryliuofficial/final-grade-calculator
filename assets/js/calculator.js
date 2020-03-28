@@ -8,6 +8,8 @@ if (localStorage.getItem('grade1') !== null) {
             document.getElementById(readvariable2).value = localStorage.getItem(readvariable2);
         }
         document.getElementById('desired').value = localStorage.getItem('desiredgrade');
+    
+    setGrades.call();
 } 
 
 
