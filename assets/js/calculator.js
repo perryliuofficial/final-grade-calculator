@@ -40,9 +40,9 @@ function setGrades() {
             var readvariable = 'grade'+step2;
             var readvariable2 = 'weight'+step2;
             grade[step2] = parseFloat(document.getElementById(readvariable).value);
-//            localStorage.setItem(readvariable, parseFloat(document.getElementById(readvariable).value));
+            localStorage.setItem(readvariable, parseFloat(document.getElementById(readvariable).value));
             weight[step2] = parseFloat(document.getElementById(readvariable2).value);
-//            localStorage.setItem(readvariable2, parseFloat(document.getElementById(readvariable2).value));
+            localStorage.setItem(readvariable2, parseFloat(document.getElementById(readvariable2).value));
         }
             
         // Calculations
@@ -66,7 +66,7 @@ function setGrades() {
         document.getElementById('min').value = (totalpercentage/100*100).toFixed(2);
         document.getElementById('max').value = (totalpercentage+(100*finalweight/100)).toFixed(2);
         var desiredgrade = parseFloat(document.getElementById('desired').value);
-//        localStorage.setItem('desiredgrade', desiredgrade);
+        localStorage.setItem('desiredgrade', desiredgrade);
         document.getElementById('needed').value = (((desiredgrade*100)-((totalpercentage/totalweight*100)*totalweight))/finalweight).toFixed(2);
     
     
