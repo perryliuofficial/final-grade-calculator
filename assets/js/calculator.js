@@ -1,4 +1,6 @@
 // see if localstorage exists
+
+function firstload() {
 if (localStorage.getItem('grade1') !== null) {
          // read numbers from localstorage and return them
         for (let step = 1; step <11; step++) {
@@ -11,7 +13,7 @@ if (localStorage.getItem('grade1') !== null) {
     
     setGrades.call();
 } 
-
+}
 
 // when clicking the clear data button
 document.getElementById("killclear").addEventListener("click", clearClick);
