@@ -49,7 +49,7 @@ cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express",
 
       
   </head>
-  <body>
+  <body onload="firstload()">
       <nav class="navbar px-5 navbar-expand-sm fixed-top navbar-dark bg-dark shadow">
   <a class="navbar-brand" href="/">Final Grade Calculator</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -260,12 +260,23 @@ cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express",
     <!-- Custom JS -->
     <script src="assets/js/calculator.js"></script>
 <!--    <script src="assets/js/calculator-optional.js"></script>-->
-      <script>
-        window.onload = function () {
-            firstload.call()}
-      </script>
-      
-      
+<!--
+ <script>  
+      function firstload() {
+if (localStorage.getItem('grade1') !== null) {
+         // read numbers from localstorage and return them
+        for (let step = 1; step <11; step++) {
+            var readvariable = 'grade'+step;
+            var readvariable2 = 'weight'+step;
+            document.getElementById(readvariable).value = localStorage.getItem(readvariable);
+            document.getElementById(readvariable2).value = localStorage.getItem(readvariable2);
+        }
+        document.getElementById('desired').value = localStorage.getItem('desiredgrade');
+    
+    setGrades.call();
+} 
+}</script>   
+-->
       
   </body>
 </html>
