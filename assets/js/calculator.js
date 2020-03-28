@@ -70,6 +70,6 @@ function setGrades() {
         document.getElementById('needed').value = (((desiredgrade*100)-((totalpercentage/totalweight*100)*totalweight))/finalweight).toFixed(2);
     
     
-    setGradesOptional.call();
+//    setGradesOptional.call();
     
         }

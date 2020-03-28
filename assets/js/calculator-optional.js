@@ -1,3 +1,5 @@
+document.getElementsByClassName("fname").addEventListener("change", setGradesOptional);
+
 function setGradesOptional() {
 		// save those variables!
             var grade = [];
